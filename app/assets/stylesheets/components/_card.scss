@@ -1,0 +1,57 @@
+.container-cards {
+  width: 1000px;
+  display: flex;
+  align-items: left;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 25x;
+  margin-bottom: 25px;
+}
+
+.img-section {
+  border: solid 1px lightgrey;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  ;}
+
+img {
+  max-width:100%;
+  max-height:100%;
+}
+
+.card-text {
+  text-align: left;
+  width: 200px;
+  h2 {
+    font-family: 'Baloo Chettan 2', cursive;
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  h3 {
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  h4 {
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 12px;
+    color: #3144A9;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#painting-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 25px;
+  width: 200px;
+}
