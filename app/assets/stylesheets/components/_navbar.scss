@@ -1,12 +1,42 @@
-.navbar-lewagon {
+.navbar {
+  height: 100px;
   justify-content: space-between;
-  background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.btn-dark {
+  background-color: black;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: 0.5s;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.btn-dark:hover {
+  color: black;
+  background-color: whitesmoke;
+}
+
+.btn-light {
+  padding: 8px 16px;
+  border-radius: 25px;
+  border-color: black;
+  transition: 0.5s;
+}
+
+.btn-light:hover {
+  background-color: black;
+  border-color: black;
+  color: whitesmoke;
+}
+
+.buttons {
+  padding-right: 100px;
+}
+
+h3 {
+  font-family: 'Changa One', bold;
+  padding-left: 100px;
+}
+
+a {
+  font-family: 'Baloo 2'
 }
