@@ -13,6 +13,22 @@
   </head>
 
   <body>
+
+  <div class="navbar">
+    <h3>RENT A PAINTING</h3>
+      <div class="buttons">
+      <% if !user_signed_in? %>
+        <%= link_to "Log in", new_user_session_path, class:"btn btn-dark"%>
+        <%= link_to "Sign up", new_user_registration_path, class:"btn btn-light"%>
+
+      <% else %>
+        <%= link_to "Log out", destroy_user_session_path, class:"btn btn-dark", method: :delete%>
+      <% end %>
+      </div>
+  </div>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
