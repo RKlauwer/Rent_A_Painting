@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
 
   def index
     # @bookings = booking.where(params[:painting_id])
+
   end
 
   def new
