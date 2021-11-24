@@ -1,6 +1,6 @@
 <h1>Paintings</h1>
 <ul>
   <% @paintings.each do |painting| %>
-  <li><%= painting.id %></li>
+  <li><%= link_to (cl_image_tag painting.photo.key, height: 150, width: 200, crop: :fill), painting_path(painting) %></li>
   <% end %>
 </ul>
