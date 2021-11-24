@@ -1,6 +1,11 @@
-<div class="">
-  <p>new booking form would be here</p>
+<div class="container">
+  <div>
+  <h2>Booking</h2>
   <%= simple_form_for [@painting, @booking] do |f| %>
-    <%= f.submit class: 'btn btn-primary'%>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.submit  class: 'btn btn-dark'%>
+    <%= link_to 'home', paintings_path, class: "btn btn-dark" %>
   <% end %>
+  </div>
 </div>

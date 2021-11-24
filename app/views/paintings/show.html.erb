@@ -8,7 +8,7 @@
     <p><%= "Name author:  " %><%= @painting.author %></p>
     <p><%= "Size:  " %><%= @painting.size %></p>
     <p><%= "€: " %><%= @painting.price %></p>
-    <%= link_to 'Rent this painting', paintings_path, class: "btn btn-dark-show" %>
+    <%= link_to 'Rent this painting', new_painting_booking_path(@painting), class: "btn btn-dark-show" %>
   </div>
 </div>
 <%= link_to 'Back', paintings_path, class: "btn btn-dark-show" %>

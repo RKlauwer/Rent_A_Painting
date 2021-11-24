@@ -1,6 +1,12 @@
-<!DOCTYPE html>
-<html>
+
+<div class="containter">
   <div class="confirmation">
-    <p>confirmation for booking would be here</p>
+    <h2>Congratulation!</h2>
+    <p></p>
+    <ul>
+      <li><%= "Rental starts: " %><%= @booking.start_date %></li>
+      <li><%= "Rental ends: " %><%= @booking.end_date %></li>
+    </ul>
   </div>
-</html>
+</div>
+<%= link_to 'Back to paintings', paintings_path, class: "btn btn-dark" %>
