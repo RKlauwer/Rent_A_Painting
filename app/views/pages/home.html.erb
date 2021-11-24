@@ -9,3 +9,26 @@
     </form>
   </div>
 </div>
+
+<!-- Replace the array with @paintings -->
+
+<div class="container-cards">
+  <div class="container">
+  <% [1, 2, 3, 4, 5, 6, 7, 8].each_slice(3) do |slice| %>
+    <div class="row">
+      <% slice.each do |element| %>
+        <div id="painting-card" class="col-4">
+            <div class="img-section">
+              <img src="https://picsum.photos/600/300" alt="">
+            </div>
+            <div class="card-text">
+              <h2>Name of the artist</h2>
+              <h3>Name of the painting</h3>
+              <h4><%="Price of the painting"%> a day</h4>
+            </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+</div>
