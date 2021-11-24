@@ -1,0 +1,10 @@
+<div class="containter">
+  <h1>Painting details</h1>
+  <%= cl_image_tag @painting.photo.key, height: 300, width: 400, crop: :fill %>
+  <ul>
+    <li><%= "Name author:  " %><%= @painting.author %></li>
+    <li><%= "Size:  " %><%= @painting.size %></li>
+    <li><%= "€: " %><%= @painting.price %></li>
+  </ul>
+  <%= link_to 'Back', paintings_path, class: "btn btn-dark" %>
+</div>
