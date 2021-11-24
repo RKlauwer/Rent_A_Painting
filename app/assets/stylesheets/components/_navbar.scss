@@ -46,3 +46,14 @@ h3 {
 a {
   font-family: 'Baloo 2'
 }
+
+.nav-link {
+  text-decoration: none;
+  color:black;
+  font-family: 'Changa One', bold;
+  padding: 0px;
+}
+
+.nav-link:hover {
+  color: rgb(0, 0, 0);
+}

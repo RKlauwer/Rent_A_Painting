@@ -15,7 +15,7 @@
   <body>
 
   <div class="navbar">
-    <h3>RENT A PAINTING</h3>
+    <h3><%= link_to "RENT A PAINTING", root_path, class:"nav-link" %></h3>
       <div class="buttons">
       <% if !user_signed_in? %>
         <%= link_to "Log in", new_user_session_path, class:"btn btn-dark"%>
