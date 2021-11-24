@@ -1,9 +1,9 @@
 <div class="banner">
   <div class="banner-objects">
     <h1 id="banner-slogan">All the art available for you right now</h1>
-    <form action="">
+    <form action="/paintings">
       <div class="banner-search">
-        <input id="search-bar" type="text" placeholder="What are you looking for ?">
+        <input id="search-bar" type="text" placeholder="What are you looking for ?" name="query">
         <button id="search-submit-btn" type="submit"><i class="fas fa-search"></i></button>
       </div>
     </form>
@@ -14,17 +14,17 @@
 
 <div class="container-cards">
   <div class="container">
-  <% [1, 2, 3, 4, 5, 6, 7, 8].each_slice(3) do |slice| %>
+   <% @paintings.each_slice(3) do |slice| %>
     <div class="row">
-      <% slice.each do |element| %>
+      <% slice.each do |painting| %>
         <div id="painting-card" class="col-4">
             <div class="img-section">
-              <img src="https://picsum.photos/600/300" alt="">
+              <%= link_to (cl_image_tag painting.photo.key, height: 150, width: 200, crop: :fill), painting_path(painting) %>
             </div>
             <div class="card-text">
-              <h2>Name of the artist</h2>
-              <h3>Name of the painting</h3>
-              <h4><%="Price of the painting"%> a day</h4>
+              <h2><%= link_to painting.author, painting_path(painting) %></h2>
+              <h3><%= painting.size %></h3>
+              <h4><%= painting.price %>$ a day</h4>
             </div>
         </div>
       <% end %>
