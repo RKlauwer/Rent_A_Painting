@@ -1,8 +1,6 @@
 class BookingsController < ApplicationController
-
   def index
     # @bookings = booking.where(params[:painting_id])
-
   end
 
   def new
@@ -13,20 +11,22 @@ class BookingsController < ApplicationController
   def create
     @painting = Painting.find(params[:painting_id])
     @booking = Booking.new(booking_params)
+    @booking.painting = @painting
+    @booking.user = current_user
     if @booking.save
-      redirect_to painting_booking_path
+      redirect_to painting_booking_path(@painting, @booking)
     else
       render :new
     end
   end
 
   def show
-    @booking = booking.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :painting_id, :user_id)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end

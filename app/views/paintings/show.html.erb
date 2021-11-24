@@ -6,5 +6,6 @@
     <li><%= "Size:  " %><%= @painting.size %></li>
     <li><%= "€: " %><%= @painting.price %></li>
   </ul>
+  <%= link_to 'Rent', new_painting_booking_path(@painting), class: "btn btn-dark" %>
   <%= link_to 'Back', paintings_path, class: "btn btn-dark" %>
 </div>
