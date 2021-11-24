@@ -1,0 +1,25 @@
+.container-show {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 75px;
+}
+
+.btn-dark-show {
+  color: whitesmoke;
+  background-color: black;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: 0.5s;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+.btn-dark-show:hover {
+  color: black;
+  background-color: whitesmoke;
+  border-color: black;
+}
+
+.owner-picture {
+  margin-right: 50px;
+}
