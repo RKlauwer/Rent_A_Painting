@@ -1,6 +1,23 @@
-<h1>Paintings</h1>
-<ul>
-  <% @paintings.each do |painting| %>
-  <li><%= link_to (cl_image_tag painting.photo.key, height: 150, width: 200, crop: :fill), painting_path(painting) %></li>
+<h1 id="header">Paintings</h1>
+<h1 id="search-header"><%="Search results for #{params[:query]}" if params[:query].present?%></h1>
+
+<div class="container-cards">
+  <div class="container">
+  <% @paintings.each_slice(3) do |slice| %>
+    <div class="row">
+      <% slice.each do |painting| %>
+        <div id="painting-card" class="col-4">
+            <div class="img-section">
+              <%= link_to (cl_image_tag painting.photo.key, height: 150, width: 200, crop: :fill), painting_path(painting) %>
+            </div>
+            <div class="card-text">
+              <h2><%= link_to painting.author, painting_path(painting) %></h2>
+              <h3><%= painting.size %></h3>
+              <h4><%= painting.price %>$ a day</h4>
+            </div>
+        </div>
+      <% end %>
+    </div>
   <% end %>
-</ul>
+</div>
+</div>

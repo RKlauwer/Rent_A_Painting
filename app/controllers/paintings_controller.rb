@@ -18,7 +18,13 @@ class PaintingsController < ApplicationController
   end
 
   def index
-    @paintings = Painting.all
+    if params[:query].present?
+      @query = params[:query]
+      sql_query = "author ILIKE :query OR size ILIKE :query"
+      @paintings = Painting.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @paintings = Painting.all
+    end
   end
 
 
