@@ -1,11 +1,14 @@
-<div class="containter">
-  <h1>Painting details</h1>
-  <%= cl_image_tag @painting.photo.key, height: 300, width: 400, crop: :fill %>
-  <ul>
-    <li><%= "Name author:  " %><%= @painting.author %></li>
-    <li><%= "Size:  " %><%= @painting.size %></li>
-    <li><%= "€: " %><%= @painting.price %></li>
-  </ul>
-  <%= link_to 'Rent', new_painting_booking_path(@painting), class: "btn btn-dark" %>
-  <%= link_to 'Back', paintings_path, class: "btn btn-dark" %>
+<div class="container-show">
+  <div class="show-picture">
+    <%= cl_image_tag @painting.photo.key, height: 300, width: 400, crop: :fill %>
+  </div>
+  <div class="show-info">
+    <%= image_tag "Monet.png", alt: "Monet", width: 200, class: "avatar" %>
+    <p><%= @painting.user.first_name %><%= "is the owner of this painting" %></p>
+    <p><%= "Name author:  " %><%= @painting.author %></p>
+    <p><%= "Size:  " %><%= @painting.size %></p>
+    <p><%= "€: " %><%= @painting.price %></p>
+    <%= link_to 'Rent this painting', new_painting_booking_path(@painting), class: "btn btn-dark-show" %>
+  </div>
 </div>
+<%= link_to 'Back', paintings_path, class: "btn btn-dark-show" %>

@@ -11,14 +11,20 @@ class PaintingsController < ApplicationController
     @painting = Painting.new(painting_params)
     @painting.user = current_user
     if @painting.save
-      redirect_to painting_path(@painting)
+      redirect_to paintings_path
     else
       render :new
     end
   end
 
   def index
-    @paintings = Painting.all
+    if params[:query].present?
+      @query = params[:query]
+      sql_query = "author ILIKE :query OR size ILIKE :query"
+      @paintings = Painting.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @paintings = Painting.all
+    end
   end
 
 
