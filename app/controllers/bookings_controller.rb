@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
-    # @bookings = booking.where(params[:painting_id])
+    @painting = Painting.find(params[:painting_id])
+    @bookings = @painting.bookings
   end
 
   def new
