@@ -14,35 +14,12 @@
 
   <body>
 
+    <div class="content">
 
-<div class="content">
-<div class="navbar">
-      <h3><%= link_to "RENT A PAINTING", root_path, class:"nav-link" %></h3>
-        <div class="buttons">
-        <% if !user_signed_in? %>
-          <%= link_to "Log in", new_user_session_path, class:"btn btn-dark"%>
-          <%= link_to "Sign up", new_user_registration_path, class:"btn btn-light"%>
-
-        <% else %>
-          <%= link_to "Log out", destroy_user_session_path, class:"btn btn-dark", method: :delete%>
-        <% end %>
-        </div>
-    </div>
-
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
       <%= yield %>
-  </div>
-
-
-
-    <div class="footer">
-      <div class="footer-links">
-        <a href="https://github.com/RKlauwer"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/cesarbngd/?hl=en"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/maryan.berhe"><i class="fab fa-facebook"></i></a>
-      </div>
-      <div class="footer-copyright">
-        This footer has been made with <i class="fas fa-heart"></i> by Maryan, Raymond, & César
-      </div>
+      <%= render 'shared/footer' %>
     </div>
   </body>
 </html>

@@ -1,17 +1,19 @@
-<div class="container">
+<div class="title">
   <h2>Bookings Index</h2>
-  <div>
+</div>
+<div class="container">
+  <div class="painting">
     <div class="show-picture">
       <%= cl_image_tag @painting.photo.key, height: 300, width: 400, crop: :fill %>
     </div>
-    <div>
+    <div class="info">
       <p><%= "Name author:  " %><%= @painting.author %></p>
       <p><%= "Size:  " %><%= @painting.size %></p>
     </div>
   </div>
-  <div>
+  <div class="booking-info">
     <% @bookings.each do |booking| %>
-    <div class="booking_info">
+    <div>
       <ul>
         <li><%= "Rented by: " %><%= booking.user.first_name %> <br>
         <%= "From: " %><%= booking.start_date %> <br>
@@ -19,6 +21,6 @@
       </ul>
     </div>
     <% end %>
+    <%= link_to 'Back to paintings', paintings_path, class: "btn btn-dark-show" %>
   </div>
 </div>
-<%= link_to 'Back to paintings', paintings_path, class: "btn btn-dark-show" %>
