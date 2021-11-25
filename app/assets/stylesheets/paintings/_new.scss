@@ -1,3 +1,48 @@
+.new-painting {
+  height: 500px;
+  width: 610px;
+  border-radius: 20px;
+  background-color: rgb(202, 202, 202);
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 40px;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 39px;
+}
+h2 {
+  font-family: 'Sansita', sans-serif;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  border-radius: 50px;
+}
+
+.form-control-file {
+  font-family: 'Baloo 2', cursive;
+  font-weight: bold;
+}
+
+label {
+  font-family: 'Baloo 2', cursive;
+  font-weight: bold;
+}
+
+.painting-size-price {
+  display: flex;
+}
+
+.painting-size {
+  padding-right: 10px;
+}
+
+.painting-price {
+  padding-left: 10px;
+}
+
 .btn-dark-new {
   color: whitesmoke;
   background-color: black;
@@ -6,4 +51,19 @@
   transition: 0.5s;
   margin-bottom: 15px;
   margin-left: 15px;
+}
+
+.btn-dark-create {
+  color: whitesmoke;
+  background-color: black;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: 0.5s;
+  width: 200px;
+}
+
+.btn-dark-create:hover {
+  color: black;
+  background-color: whitesmoke;
+  border-color: black;
 }

@@ -27,7 +27,6 @@ class PaintingsController < ApplicationController
     end
   end
 
-
   private
 
   def painting_params
