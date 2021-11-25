@@ -1,6 +1,17 @@
 <h1 id="header">Paintings</h1>
 <h1 id="search-header"><%="Search results for #{params[:query]}" if params[:query].present?%></h1>
 
+<div class="form-price">
+<form id="form-price" action="/paintings">
+      <label for="customRange2" class="form-label">Budget per day</label>
+      <input id="query" name="query" type="hidden" value="<%= params[:query] if params[:query].present?%>">
+      <div class="form-value">
+      <input id="rangeform" type="range" name="range" class="form-range" value="<%= @range %>" min="1" max="100" oninput="this.nextElementSibling.value = this.value" onmouseup="document.getElementById('form-price').submit()">
+      <output><%= @range %></output>
+      </div>
+</form>
+</div>
+
 <div class="container-cards">
   <div class="container">
   <% @paintings.each_slice(3) do |slice| %>
