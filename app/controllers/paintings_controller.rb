@@ -18,10 +18,17 @@ class PaintingsController < ApplicationController
   end
 
   def index
-    if params[:query].present?
+    if params[:query].present? && params[:range].present?
+      @query = params[:query]
+      @range = params[:range].to_i
+      @paintings = Painting.where("price < :range AND author ILIKE :query OR size ILIKE :query", query: "%#{params[:query]}%", range: @range)
+    elsif params[:query].present? && !params[:range].present?
       @query = params[:query]
       sql_query = "author ILIKE :query OR size ILIKE :query"
       @paintings = Painting.where(sql_query, query: "%#{params[:query]}%")
+    elsif !params[:query].present? && params[:range].present?
+      @range = params[:range].to_i
+      @paintings = Painting.where("price < ?", @range)
     else
       @paintings = Painting.all
     end
