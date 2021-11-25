@@ -1,0 +1,41 @@
+.container-user {
+  display: flex;
+  justify-content: space-around;
+}
+
+.user {
+  margin-top: 80px;
+  background-color: rgb(202, 202, 202);
+  height: 400px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  position: sticky;
+}
+
+.booking-header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-dark-show {
+  color: whitesmoke;
+  background-color: black;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: 0.5s;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+.user-name {
+  margin-top: 20px;
+}
+
+.user-email {
+  margin-top: 20px;
+}
+
+.user-header {
+  margin-top: 20px;
+}
