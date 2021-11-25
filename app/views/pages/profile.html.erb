@@ -1,0 +1,56 @@
+<div class="container-user">
+  <div class="user">
+    <div class="user-header">
+      <h1>Profile page</h1>
+    </div>
+    <div class="user-picture">
+      <%= image_tag "avatar.jpeg", alt: "Face", width: 200, class: "show-avatar" %>
+    </div>
+    <div class="user-name">
+      <h4>Name</h4>
+      <%= current_user.first_name %>
+      <%= current_user.last_name %>
+    </div>
+    <div class="user-email">
+      <h4>Email</h4>
+      <%= current_user.email %></p>
+    </div>
+  </div>
+  <div class="profile">
+    <div class="profile-booking">
+      <div class="booking-header">
+        <h4>Bookings</h4>
+      </div>
+      <div class="row">
+        <% current_user.booked_paintings.each do |painting| %>
+            <div id="painting-card" class="col-4">
+              <div class="img-section">
+                <%= link_to (cl_image_tag painting.photo.key, height: 150, width: 200, crop: :fill), painting_path(painting) %>
+              </div>
+              <div class="card-text">
+                <h2><%= link_to painting.author, painting_path(painting) %></h2>
+                <h3><%= painting.size %></h3>
+                <h4><%= painting.price %>$ a day</h4>
+              </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="profile-painting">
+      <div class="booking-header">
+        <h4>My paintings</h4>
+      </div>
+      <% current_user.paintings.each do |painting| %>
+        <div id="painting-card" class="col-4">
+          <div class="img-section">
+            <%= link_to (cl_image_tag painting.photo.key, height: 150, width: 200, crop: :fill), painting_path(painting) %>
+          </div>
+          <div class="card-text">
+            <h2><%= link_to painting.author, painting_path(painting) %></h2>
+            <h3><%= painting.size %></h3>
+            <h4><%= painting.price %>$ a day</h4>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
