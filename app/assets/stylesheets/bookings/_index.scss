@@ -7,7 +7,7 @@
   padding-left: 100px;
 }
 .index-container{
-  display: flexbox;
+  display: flex;
 
 
   .painting{
@@ -24,8 +24,8 @@
     position: sticky;
   }
   .booking-info{
-    height: 200px;
-    width: 310px;
+    // height: 200px;
+    // width: 310px;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 30px;
