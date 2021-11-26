@@ -4,14 +4,16 @@
 }
 
 .user {
-  margin-top: 80px;
+  margin-top: 50px;
   background-color: rgb(202, 202, 202);
   border-radius: 20px;
   max-width: 300px;
   padding: 0 1rem;
   text-align: center;
   position: sticky;
-  flex-shrink: 0
+  flex-shrink: 0;
+  margin-bottom: 50px;
+  margin-left: 50px;
 }
 
 .profile {
