@@ -1,11 +1,19 @@
-<div class="container">
-  <h1>Create a new painting</h1>
+<div class="new-painting">
+  <h2>New painting</h2>
   <%= simple_form_for (@painting) do |f| %>
     <%= f.input :author %>
-    <%= f.input :size %>
-    <%= f.input :price %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit "Create", class: "btn btn-dark" %>
-    <%= link_to 'Back to index', paintings_path, class: "btn btn-dark" %>
+    <div class="painting-size-price">
+      <div class="painting-size">
+        <%= f.input :size %>
+      </div>
+      <div class="painting-price">
+        <%= f.input :price %>
+      </div>
+    </div>
+    <div class="painting-foto">
+      <%= f.input :photo, as: :file %>
+    </div>
+    <%= f.submit "Create", class: "btn btn-dark-create" %>
   <% end  %>
 </div>
+<%= link_to 'Back to index', paintings_path, class: "btn btn-dark-new" %>
