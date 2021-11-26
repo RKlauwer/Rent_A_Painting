@@ -1,20 +1,32 @@
 .new-painting {
-  height: 500px;
-  width: 610px;
+  height: 400px;
+  width: 530px;
   border-radius: 20px;
   background-color: rgb(202, 202, 202);
   margin: auto;
   margin-top: 50px;
   text-align: center;
-  padding-top: 40px;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
   margin-bottom: 39px;
-}
-h2 {
-  font-family: 'Sansita', sans-serif;
-  font-size: 50px;
-  margin-bottom: 30px;
+  position: relative;
+  .string .required {
+    margin: 0;
+  }
+  .integer .required {
+    margin: 0;
+  }
+
+
+  h2 {
+    font-family: 'Sansita', sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .painting_photo {
+    align-items: center;
+  }
 }
 
 .form-control {
@@ -67,3 +79,19 @@ label {
   background-color: whitesmoke;
   border-color: black;
 }
+
+.new-cross {
+  position: absolute;
+  right: 20px;
+
+}
+
+#cross::before {
+  font-size: 2rem;
+  color: rgb(82, 82, 82);
+}
+
+#cross:hover::before {
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+  }

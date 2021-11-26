@@ -1,4 +1,9 @@
 <div class="new-painting">
+  <div class="new-cross">
+  <%= link_to root_path do %>
+    <i id="cross" class="far fa-times-circle"></i>
+  <% end %>
+  </div>
   <h2>New painting</h2>
   <%= simple_form_for (@painting) do |f| %>
     <%= f.input :author %>
@@ -16,4 +21,3 @@
     <%= f.submit "Create", class: "btn btn-dark-create" %>
   <% end  %>
 </div>
-<%= link_to 'Back to index', paintings_path, class: "btn btn-dark-new" %>

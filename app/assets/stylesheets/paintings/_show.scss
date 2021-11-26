@@ -1,17 +1,15 @@
 .container-show {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 55px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .btn-dark-show {
   color: whitesmoke;
   background-color: black;
-  padding: 8px 16px;
   border-radius: 25px;
   transition: 0.5s;
-  margin-bottom: 15px;
-  margin-left: 15px;
 }
 
 .btn-dark-show:hover {
@@ -26,11 +24,72 @@
 }
 
 .show-picture {
-  display: flex;
-  justify-content: center;
+  align-items: center;
+  p {
+    font-family: 'Baloo Chettan 2', cursive;
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .show-link {
   display: flex;
   justify-content: center;
 }
+
+.show-painting {
+  border: solid 1px lightgrey;
+  height: 60vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  ;}
+
+  .show-info {
+    justify-content: space-evenly;
+    width: 30%;
+  }
+
+  .painting-informations {
+    padding-top: 25%;
+  }
+
+  .boutton {
+    width: 100%;
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 25px;
+  }
+   .boutton:hover {
+    color: black;
+    background-color: whitesmoke;
+    transition: 0.5s;
+    border: solid 1px black;
+  }
+
+  .painting-info {
+    margin-bottom: 6%;
+    h2 {
+    font-family: 'Baloo Chettan 2', cursive;
+    font-weight: bolder;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  h3 {
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+  }
+  h4 {
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 18px;
+    color: #3144A9;
+    margin: 0;
+    padding: 0;
+  }
+  }
