@@ -20,38 +20,13 @@
     <div class="profile-booking">
       <div class="booking-header">
         <h4>Bookings</h4>
+        <%= render 'paintings/carousel', id: "booked-carousel", paintings: current_user.booked_paintings %>
       </div>
-      <div class="row">
-        <% current_user.booked_paintings.each do |painting| %>
-          <div id="painting-card" class="col-4">
-            <div class="img-section">
-              <%= link_to (cl_image_tag painting.photo.key, height: 150, width: 200, crop: :fill), painting_path(painting) %>
-            </div>
-            <div class="card-text">
-              <h2><%= link_to painting.author, painting_path(painting) %></h2>
-              <h3><%= painting.size %></h3>
-              <h4><%= painting.price %>$ a day</h4>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    </div>
     <div class="profile-painting">
       <div class="booking-header">
         <h4>My paintings</h4>
+        <%= render 'paintings/carousel', id: "my-paintings-carousel", paintings: current_user.paintings %>
       </div>
-      <% current_user.paintings.each do |painting| %>
-        <div id="painting-card" class="col-4">
-          <div class="img-section">
-            <%= link_to (cl_image_tag painting.photo.key, height: 150, width: 200, crop: :fill), painting_path(painting) %>
-          </div>
-          <div class="card-text">
-            <h2><%= link_to painting.author, painting_path(painting) %></h2>
-            <h3><%= painting.size %></h3>
-            <h4><%= painting.price %>$ a day</h4>
-          </div>
-        </div>
-      <% end %>
     </div>
   </div>
 </div>
