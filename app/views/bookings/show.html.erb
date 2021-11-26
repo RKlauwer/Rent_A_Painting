@@ -1,12 +1,26 @@
-
-<div class="containter">
+<div class="title-show">
+  <h2>Rental Confirmation</h2>
+</div>
+<div class="confirm-containter">
   <div class="confirmation">
-    <h2>Congratulation!</h2>
-    <p></p>
-    <ul>
-      <li><%= "Rental starts: " %><%= @booking.start_date %></li>
-      <li><%= "Rental ends: " %><%= @booking.end_date %></li>
-    </ul>
+      <div class="painting-display">
+        <div class="show-picture">
+          <%= cl_image_tag @painting.photo.key, height: 300, width: 400, crop: :fill %>
+        </div>
+        <div class="show-info">
+          <p><%= "Name author:  " %><%= @painting.author %></p>
+          <p><%= "Size:  " %><%= @painting.size %></p>
+        </div>
+      </div>
+      <div class="user-info">
+        <h4><%= "Congratulation " %><%= @booking.user.first_name %><%= " you've successfully rented this painting!" %></h4>
+        <ul>
+          <li><%= "Rental starts: " %><%= @booking.start_date %></li>
+          <li><%= "Rental ends: " %><%= @booking.end_date %></li>
+        </ul>
+      </div>
+  </div>
+  <div>
+    <%= link_to 'Back to paintings', paintings_path, class: "btn btn-dark" %>
   </div>
 </div>
-<%= link_to 'Back to paintings', paintings_path, class: "btn btn-dark" %>

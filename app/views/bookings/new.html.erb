@@ -1,11 +1,13 @@
-<div class="container">
+<div class="bookings-container">
   <div class="booking_new">
   <h2>Booking</h2>
   <%= simple_form_for [@painting, @booking] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
+    <%= f.input :start_date, html5:true %>
+    <%= f.input :end_date, html5:true %>
+    <div class="booking-btns">
     <%= f.submit  class: 'btn btn-dark'%>
     <%= link_to 'home', paintings_path, class: "btn btn-dark" %>
+    </div>
   <% end %>
   </div>
 </div>

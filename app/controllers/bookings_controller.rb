@@ -1,7 +1,11 @@
 class BookingsController < ApplicationController
   def index
     @painting = Painting.find(params[:painting_id])
-    @bookings = @painting.bookings
+    if @painting.user == current_user
+      @bookings = @painting.bookings
+    else
+      redirect_to "/", notice: "You're not the owner"
+    end
   end
 
   def new
@@ -15,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.painting = @painting
     @booking.user = current_user
     if @booking.save
-      redirect_to painting_booking_path(@painting, @booking)
+      redirect_to booking_path(@booking)
     else
       render :new
     end
@@ -23,6 +27,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    @painting = @booking.painting
   end
 
   private

@@ -1,0 +1,55 @@
+
+.index-title{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+.index-container{
+  display: flexbox;
+
+
+  .painting{
+    height: 450px;
+    width: 610px;
+    border-radius: 20px;
+    background-color: rgb(202, 202, 202);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 39px;
+    padding-bottom: 39px;
+    position: sticky;
+  }
+  .booking-info{
+    height: 200px;
+    width: 310px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .info{
+    padding-top: 25px;
+  }
+
+  // .btn-div{
+  //   margin-top: 20px;
+  //   margin-bottom: 20px;
+  //   // display: flex;
+  //   // justify-content: end;
+  //   align-items: right;
+  // }
+
+  h2{
+    font-family: 'Sansita', sans-serif;
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+
+}
