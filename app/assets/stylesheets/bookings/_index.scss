@@ -11,17 +11,16 @@
 
 
   .painting{
-    height: 450px;
-    width: 610px;
-    border-radius: 20px;
-    background-color: rgb(202, 202, 202);
+
+    border: solid 1px lightgrey;
+    border-radius: 5px;
+    height: 50vh;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
     padding-top: 39px;
     padding-bottom: 39px;
-    position: sticky;
   }
   .booking-info{
     // height: 200px;
