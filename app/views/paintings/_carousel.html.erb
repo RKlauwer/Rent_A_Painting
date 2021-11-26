@@ -1,10 +1,23 @@
-<div id="<%= id %>" class="carousel slide" data-ride="carousel">
+<div id="<%= id %>" class="carousel slide" data-pause="hover" data-ride="carousel">
   <div class="carousel-inner">
-    <% paintings.each.with_index do |painting, index| %>
+    <% paintings.each_slice(3).with_index do |slice, index| %>
       <div class="carousel-item <%= index.zero? ? "active" : "" %>" >
-        <%= link_to (cl_image_tag painting.photo.key, height: 150, width: 200, crop: :fill), painting_path(painting), class: "d-block w-100" %>
-        <a><%= painting.author %></a>
-        <h5><%= painting.price %>$ a day</h5>
+        <div class="row">
+          <% slice.each do |painting| %>
+            <div class="col-4">
+              <div id="painting-card">
+                <div class="img-section">
+                  <%= link_to (cl_image_tag painting.photo.key, height: 150, width: 200, crop: :fill), painting_path(painting) %>
+                </div>
+                <div class="card-text">
+                  <h2><%= link_to painting.author, painting_path(painting) %></h2>
+                  <h3><%= painting.size %></h3>
+                  <h4><%= painting.price %>$ a day</h4>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>
