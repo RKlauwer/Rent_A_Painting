@@ -14,10 +14,10 @@
 
 <div class="container-cards">
   <div class="container">
-  <% @paintings.each_slice(3) do |slice| %>
-    <div class="row">
-      <% slice.each do |painting| %>
-        <div id="painting-card" class="col-4">
+    <% @paintings.each_slice(3) do |slice| %>
+      <div class="row">
+        <% slice.each do |painting| %>
+          <div id="painting-card" class="col-4">
             <div class="img-section">
               <%= link_to (cl_image_tag painting.photo.key, height: 150, width: 200, crop: :fill), painting_path(painting) %>
             </div>
@@ -26,9 +26,9 @@
               <h3><%= painting.size %></h3>
               <h4><%= painting.price %>$ a day</h4>
             </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
-</div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
