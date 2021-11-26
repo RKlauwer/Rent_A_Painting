@@ -6,11 +6,16 @@
 .user {
   margin-top: 80px;
   background-color: rgb(202, 202, 202);
-  height: 400px;
   border-radius: 20px;
-  width: 300px;
+  max-width: 300px;
+  padding: 0 1rem;
   text-align: center;
   position: sticky;
+  flex-shrink: 0
+}
+
+.profile {
+  flex-grow: 1
 }
 
 .booking-header {
