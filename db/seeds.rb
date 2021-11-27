@@ -19,7 +19,7 @@ user.save
   )
   painting.user = user
   painting.save
-  image_url = "https://source.unsplash.com/#{rand(30..200)}x#{rand(30..200)}/?painting"
+  image_url = "https://source.unsplash.com/#{rand(500..1500)}x#{rand(500..1500)}/?painting"
   downloaded_image = URI.open(image_url)
   painting.photo.attach(io: downloaded_image, filename: "painting-#{painting.id}")
   painting.save!
