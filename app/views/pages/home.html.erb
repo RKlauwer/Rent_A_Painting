@@ -10,15 +10,6 @@
   </div>
 </div>
 <h1 id="header"><%=Painting.count%> paintings for rent</h1>
-<div class="form-price">
-<form id="form-price" action="/">
-      <label for="customRange2" class="form-label">Budget per day</label>
-      <div class="form-value">
-      <input id="rangeform" type="range" name="range" class="form-range" value="<%= @range %>" min="1" max="100" oninput="this.nextElementSibling.value = this.value" onmouseup="document.getElementById('form-price').submit()">
-      <output><%= @range %></output>
-      </div>
-</form>
-</div>
 
 
 
